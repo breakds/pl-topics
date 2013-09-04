@@ -4,5 +4,7 @@ pl-topics
 Topics in Learning Programing Language: thoughts and the related programming practice
 
 
-References:
-  - Programming Language Pragmatics
+#### References:
+
+Books:
+  - Programming Language Pragmatics, 3rd Edition, 2009
