@@ -1,0 +1,22 @@
+* Concepts
+** Context-free Language
+Any set of strings that can be defined if we add recursion to regular
+set.
+* Representation of Regular Expression
+** Notes
+Regular expression by definition has 
++ Concatenation
++ Disjunction
++ Repetition (0 or many occurences)
+Adding "+" we have the definition in regexp.lisp
+* Convert DFA to Regular Expression
+** Algorithm 
+d'(i,j) = d(i,k)d(k,k)*d(k,j)
+** Notes
+The iteration ends in n iterations, where n is the number of states in
+DFA. This is analogical to Bellmen Ford in dealing with loops, since n
+iteration guarantees that the largest loop (whose length <= n) will be
+detected.
+** Notes
+The algorithm relies on reduction of regular expressions
+
