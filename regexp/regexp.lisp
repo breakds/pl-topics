@@ -54,7 +54,7 @@ normalized (simplified) regular expressions."
 (defun simplify-to-wildcard (rexp)
   "Handle rules 1 and 2"
   (let ((a (and (cadr rexp) (caddr rexp)))
-        (b (or ((cadr rexp) (caddr rexp)))))
+        (b (or (cadr rexp) (caddr rexp))))
     (and (not a)
          (= (length rexp) 3)
          (member (car b) '(+ *))

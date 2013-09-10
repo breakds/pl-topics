@@ -3,6 +3,9 @@
 
 (asdf:defsystem #:pl-topics
     :serial t
-    :depends-on (#:basicl)
+    :depends-on (#:basicl
+		 #:stefil)
     :components ((:file "packages")
-                 (:file "regexp/regexp")))
+                 (:file "regexp/regexp")
+		 (:file "regexp/regexp-test")))
+			
