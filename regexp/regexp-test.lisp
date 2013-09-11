@@ -6,12 +6,14 @@
 
 
 (defsuite* (test-all :in root-suite 
-		     :docuentation "test regular expression routines"))
+		     :documentation "test regular expression routines"))
 
 (in-suite test-all)
 
+
+;; test disjunction-p
 (deftest test-disjunction-p (rexp &optional (expected t))
-  (is (disjunction-p rexp) expected))
+  (is (eq (disjunction-p rexp) expected)))
 
 (deftest test-disjunction-p-cases ()
   (every #'test-disjunction-p
@@ -21,4 +23,7 @@
 	 '((#\a #\b #\c)
 	   (+ #\a)
 	   (* (#\a #\a)))))
+
+
+
     

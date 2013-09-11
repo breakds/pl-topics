@@ -5,7 +5,9 @@
     :serial t
     :depends-on (#:basicl
 		 #:stefil)
-    :components ((:file "packages")
-                 (:file "regexp/regexp")
-		 (:file "regexp/regexp-test")))
+    :components ((:module "regexp" 
+                          :components
+                          ((:file "package")
+                           (:file "regexp")
+                           (:file "regexp-test")))))
 			
