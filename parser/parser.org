@@ -1,0 +1,38 @@
+* EBNF based Parser Project 
+** Objective
+   + A parser is a program that takes *source code* as input, and
+     outputs *abstract syntax tree*.
+   + The parser itself can be defined by a language, EBNF. We need a
+     parser generator which generates a parser from the EBNF *source
+     code*.
+   + Once we have the Parser and Parser Generator, we should be able
+     to generate the parser for EBNF.
+   + That is to say, if we have a parser generator at hand, we should
+     be able to generate an EBNF parser. This EBNF parser can in turn
+     be used to generate EBNF AST from EBNF source code.
+   + This means that our parse generator would better just take EBNF
+     AST as input.
+*** Objective 1: A parser generator that converts an EBNF AST to a parser
+    + EBNF AST -> parser
+*** Objective 2: Manually code the EBNF AST for EBNF itself
+    + EBNF AST for EBNF itself
+*** Objective 3: Now we should be able to generate a parser from EBNF
+    + Given an EBNF definiton for language L
+    + EBNF AST for EBNF + parser generator = EBNF parser
+    + EBNF definition for language L + EBNF parser = EBNF AST for L
+    + EBNF AST for L + parser generator = L parser
+
+* EBNF Syntax in EBNF
+** Original 
+#+BEGIN_SRC EBNF
+   syntax = {production}.
+   production = identifier "=" expression ".".
+   expression = term {"|" term}.
+   term = factor {factor}.
+   factor = identifier | string | "(" expression ")" | "[" expression "]" | "{" expression "}".
+   identifier = letter {letter | digit}.
+   string = """ {character} """.
+   letter = "A" | ... | "Z".
+   digit = "0" | ... | "9".
+#+END_SRC
+
