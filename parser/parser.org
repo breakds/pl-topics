@@ -21,7 +21,6 @@
     + EBNF AST for EBNF + parser generator = EBNF parser
     + EBNF definition for language L + EBNF parser = EBNF AST for L
     + EBNF AST for L + parser generator = L parser
-
 * EBNF Syntax in EBNF
 ** Original 
 #+BEGIN_SRC EBNF
